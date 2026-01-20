@@ -2,11 +2,11 @@
 ## **Veraion 1.0** :
 ### -Website is published you can visit it at **rayanshikie.com**  
 ### -Includes:  
-  .**hero** section  
-  .**skills** section  
-  .two sections for my projects: **Coursat - PlanBa2**  
-  .resume and contact section  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● **hero** section  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● **skills** section  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● two sections for my projects: **Coursat - PlanBa2**  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● resume and contact section  
 ## **Version 1.1(not realesed yet)** :  
 ### -Plans to:  
-  .make all sections **responsive**  
-  .polishing some details on the **contact** section  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● make all sections **responsive**  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● polishing some details on the **contact** section  
