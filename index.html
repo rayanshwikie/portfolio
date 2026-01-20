@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rayan Shwikie</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <link rel="stylesheet" href="vendor/fullpage.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/font3.css">
+    
+</head>
+<body>
+    <style>
+    #skills-section .card {
+        transition: transform 220ms ease, box-shadow 220ms ease;
+        transform-origin: center;
+        overflow: hidden;
+        background: linear-gradient(135deg, #071427 0%, #0b2340 60%, #132b4f 100%) !important;
+        border: none;
+    }
+    #skills-section .card:hover {
+        transform: scale(1.04);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.45);
+    }
+
+    #skills-section .progress-bar {
+        width: var(--percent, 0%);
+        transition: width 900ms cubic-bezier(0.2, 1.6, 0.3, 1);
+    }
+
+    #skills-section .card:hover .progress-bar {
+        width: 0% !important;
+        transition: width 300ms ease;
+    }
+
+    #skills-section .badge { 
+        font-weight:700; padding: .45rem .6rem; color: #fff !important; 
+    }
+
+    #skills-section .card,
+    #skills-section .card * {
+        color: #ffffff !important;
+    }
+
+    #skills-section .card .text-muted { 
+        color: rgba(255,255,255,0.85) !important; 
+    }
+
+    #skills-section .card .small { 
+        color: rgba(255,255,255,0.85) !important; 
+    }
+
+    #skills-section {
+        position: relative;
+        background: linear-gradient(180deg, #071427 0%, #0d1829 60%);
+        overflow: hidden;
+    }
+
+    #skills-section::before{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.015) 0 2px, transparent 2px 60px);
+        pointer-events: none;
+        opacity: 0.9;
+    }
+
+    #skills-section::after{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(800px 200px at 50% 10%, rgba(255,255,255,0.02), transparent 25%),
+                    radial-gradient(800px 400px at 50% 90%, rgba(0,0,0,0.25), transparent 40%);
+        pointer-events: none;
+    }
+
+        .btn-skill,
+        .btn-skill:hover,
+        .btn-skill:focus { 
+            color: #ffffff !important; 
+        }
+
+    #skills-section .container h1 {
+        position: relative;
+        display: inline-block;
+        font-size: 2.25rem;
+        letter-spacing: 0.6px;
+        font-weight: 900;
+        margin-bottom: 1.25rem;
+        z-index: 2;
+    }
+    #skills-section .container h1::after{
+        content: "";
+        display: block;
+        height: 6px;
+        width: 72px;
+        margin: 10px auto 0;
+        border-radius: 6px;
+        background: linear-gradient(90deg, #3fc1ff, #8a7bff);
+        box-shadow: 0 10px 30px rgba(138,123,255,0.18);
+    }
+    .skill-item { 
+        display: flex; align-items: center; 
+    }
+    .skill-item i { 
+        font-size: 2em; 
+    }
+    .skill-item .skill-name {
+         opacity: 0; font-weight: bold; font-size: 0.9em; margin-left: 0.5rem; transition: opacity 0.3s ease; 
+        }
+    .skill-item:hover .skill-name { 
+        opacity: 1; 
+    }
+    .hero-social { 
+        margin-top: .75rem; 
+    }
+    .hero-social-link {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+        color: #fff;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+        border: 1px solid rgba(255,255,255,0.06);
+        transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+    }
+
+    .hero-social-link i { 
+        font-size: 1.15rem; 
+    }
+
+    .hero-social-link:hover {
+        transform: translateY(-4px) scale(1.06);
+        background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));
+        box-shadow: 0 14px 36px rgba(0,0,0,0.45);
+        text-decoration: none;
+    }
+
+    .btn-skill {
+        background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+        color: #fff;
+        border: 1px solid rgba(255,255,255,0.06);
+        padding: .6rem 1.1rem;
+        box-shadow: 0 8px 22px rgba(0,0,0,0.28);
+        transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+    }
+
+    .btn-skill:hover { 
+        transform: translateY(-3px); background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04)); box-shadow: 0 16px 40px rgba(105, 105, 105, 0.45); 
+    }
+    
+    .hero-section { 
+        position: relative; z-index: 0; overflow: hidden; background:
+        repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0 2px, transparent 2px 60px),
+        linear-gradient(180deg, #071427 0%, #0d1829 60%);
+    }
+
+    .hero-section::before{ 
+        display: none; 
+    }
+    .hero-section::after{ 
+        display: none; 
+    }
+    .hero-section > .container { 
+        position: relative; z-index: 2; 
+    }
+
+    html { 
+        scroll-behavior: smooth; 
+        }
+        </style>
+    
+
+<div id="fullpage">
+    <div class="section hero-section" style="position:relative;">
+
+        <div class="container text-center text-white d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
+
+        <img src="img/personal.jpg" alt="Profile Photo" class="rounded-circle shadow mt-4 mb-3" style="width: 150px; height: 150px; object-fit: cover; border: 5px solid white;">
+
+        <div class="hero-social d-flex gap-3 mt-4" style="z-index:3;">
+
+            <a href="https://github.com/rayanshwikie" target="_blank" rel="noopener" aria-label="GitHub" class="d-inline-flex align-items-center justify-content-center hero-social-link">
+                <i class="bi bi-github"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/rayan-shwikie-b56278399/" target="_blank" rel="noopener" aria-label="LinkedIn" class="d-inline-flex align-items-center justify-content-center hero-social-link">
+                <i class="bi bi-linkedin"></i>
+            </a>
+
+            <a href="https://www.instagram.com/shwikie/" target="_blank" rel="noopener" aria-label="Instagram" class="d-inline-flex align-items-center justify-content-center hero-social-link">
+                <i class="bi bi-instagram"></i>
+            </a>
+
+        </div>
+
+        <h1 class="display-4 fw-bold">
+            Hello, I'm Rayan Shwikie
+        </h1>
+
+        <p class="lead">
+            A passionate Junior Software Developer crafting modern, responsive apps and web apps.
+        </p>
+
+        <a href="#skills" class="btn btn-light rounded-5 px-4 btn-skill">Skills</a>
+
+        
+
+    </div>
+</div>
+
+
+
+    <div id="skills-section" class="section" style="background: #0D1829;">
+
+        <div class="container text-center text-white py-5">
+            <h1 class="mb-4 fw-bold">Skills & Expertise</h1>
+            <div class="row">
+                <div class="col-6 col-md-3 p-2">
+                    <div class="card p-3 shadow h-100 d-flex flex-column justify-content-between bg-white text-light">
+                        <div>
+                            <div class="skill-item mb-2">
+                                <i class="devicon-php-plain" style="color: #767BB3 !important;"></i>
+                                <span class="skill-name">PHP</span>
+                            </div>
+                            <p class="mb-3 small text-muted text-light">Server-side scripting, backend logic.</p>
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-between mb-1">
+                                <small class="text-muted">85%</small>
+                            </div>
+                            <div class="progress" style="height:8px;">
+                                <div class="progress-bar" role="progressbar" style="background: linear-gradient(90deg, #3fc1ff, #8a7bff) !important; --percent:85%; width:85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 p-2">
+                    <div class="card p-3 shadow h-100 d-flex flex-column justify-content-between bg-white text-dark">
+                        <div>
+                            <div class="skill-item mb-2">
+                                <i class="devicon-python-plain" style="color: #FFCC3D !important;"></i>
+                                <span class="skill-name">Python</span>
+                            </div>
+                            <p class="mb-3 small text-muted">Scripting, data tasks and backend.</p>
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-between mb-1">
+                                <small class="text-muted">80%</small>
+                            </div>
+                            <div class="progress" style="height:8px;">
+                                <div class="progress-bar" role="progressbar" style="background-color: #FFCC3D !important; --percent:70%; width:70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 p-2">
+                    <div class="card p-3 shadow h-100 d-flex flex-column justify-content-between bg-white text-dark">
+                        <div>
+                            <div class="skill-item mb-2">
+                                <i class="devicon-java-plain" style="color: #D11313 !important;"></i>
+                                <span class="skill-name">Java</span>
+                            </div>
+                            <p class="mb-3 small text-muted">Object-oriented programming.</p>
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-between mb-1">
+                                <small class="text-muted">50%</small>
+                            </div>
+                            <div class="progress" style="height:8px;">
+                                <div class="progress-bar" role="progressbar" style="background-color: #D11313 !important; --percent:50%; width:50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 p-2">
+                    <div class="card p-3 shadow h-100 d-flex flex-column justify-content-between bg-white text-dark">
+                        <div>
+                            <div class="skill-item mb-2">
+                                <i class="devicon-html5-plain" style="color: #E34C25 !important;"></i>
+                                <span class="skill-name">HTML/CSS</span>
+                            </div>
+                            <p class="mb-3 small text-muted">Responsive layouts, styling and accessibility.</p>
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-between mb-1">
+                                <small class="text-muted">90%</small>
+                            </div>
+                            <div class="progress" style="height:8px;">
+                                <div class="progress-bar" role="progressbar" style="background-color: #E34C25 !important; --percent:90%; width:90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 p-2">
+                    <div class="card p-3 shadow h-100 d-flex flex-column justify-content-between bg-white text-dark">
+                        <div>
+                            <div class="skill-item mb-2">
+                                <i class="devicon-javascript-plain" style="color: #F6DD1E !important;"></i>
+                                <span class="skill-name">JavaScript</span>
+                            </div>
+                            <p class="mb-3 small text-muted">Client-side interactivity and lightweight apps.</p>
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-between mb-1">
+                                <small class="text-muted">75%</small>
+                            </div>
+                            <div class="progress" style="height:8px;">
+                                <div class="progress-bar" role="progressbar" style="background-color: #F6DD1E !important; --percent:75%; width:75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 p-2">
+                    <div class="card p-3 shadow h-100 d-flex flex-column justify-content-between bg-white text-dark">
+                        <div>
+                            <div class="skill-item mb-2">
+                                <i class="devicon-react-plain" style="color: #5FDAF1 !important;"></i>
+                                <span class="skill-name">React-Native</span>
+                            </div>
+                            <p class="mb-3 small text-muted">Cross-platform mobile UI and components.</p>
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-between mb-1">
+                                <small class="text-muted">65%</small>
+                            </div>
+                            <div class="progress" style="height:8px;">
+                                <div class="progress-bar" role="progressbar" style="background-color: #5FDAF1 !important; --percent:65%; width:65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 p-2">
+                    <div class="card p-3 shadow h-100 d-flex flex-column justify-content-between bg-white text-dark">
+                        <div>
+                            <div class="skill-item mb-2">
+                                <i class="devicon-bootstrap-plain" style="color: #7F27ED !important;"></i>
+                                <span class="skill-name">Bootstrap</span>
+                            </div>
+                            <p class="mb-3 small text-muted">Fast responsive layouts using components.</p>
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-between mb-1">
+                                <small class="text-muted">95%</small>
+                            </div>
+                            <div class="progress" style="height:8px;">
+                                <div class="progress-bar" role="progressbar" style="background-color: #7F27ED !important; --percent:95%; width:95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 p-2">
+                    <div class="card p-3 shadow h-100 d-flex flex-column justify-content-between bg-white text-dark">
+                        <div>
+                            <div class="skill-item mb-2">
+                                <i class="devicon-mysql-plain" style="color: #00618E !important;"></i>
+                                <span class="skill-name">MySQL</span>
+                            </div>
+                            <p class="mb-3 small text-muted">Database design, queries and optimization.</p>
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-between mb-1">
+                                <small class="text-muted">80%</small>
+                            </div>
+                            <div class="progress" style="height:8px;">
+                                <div class="progress-bar " role="progressbar" style="background-color: #00618E !important; --percent:80%; width:80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <div class="container-fluid text-white py-5 " style="background: linear-gradient(135deg, #6495ED, #1E3C72);height: 100vh;display: flex;align-items: center;padding-left: 5%;padding-right: 5%;position: relative;overflow: hidden;">
+            <div style="flex: 1; max-width: 40%; position: relative;">
+                <h1 style="color: white; font-weight: 900; font-size: 6rem; line-height: 1; font-family: 'Red Hat Display', serif;">COURSAT</h1>
+                <h4 style="color: #d3dce6; font-weight: 500; margin-top: -10px;"> &nbsp;Learn with no limits</h4>
+                <p style="color: #f0f5fa; font-style: italic; margin-top: 15px; font-weight: 600;"> &nbsp;&nbsp;Coming soon</p>
+                <div class="mt-3" style="z-index:3;">
+                    <a href="https://github.com/rayanshwikie/Coursat-C.M.S" class="btn btn-outline-light btn-skill" target="_blank" rel="noopener noreferrer" aria-label="Open COURSAT repository on GitHub">
+                        <i class="bi bi-github me-2"></i> View repository
+                    </a>
+                </div>
+            </div>
+            <div style="flex: 1; max-width: 50%; color: white; text-align: justify; font-size: 1.2rem; line-height: 1.6; font-family: 'Red Hat Display', serif;">
+                <p>
+                    COURSAT is your upcoming platform to unlock unlimited learning opportunities. Whether you want to master programming, design, or any other skill, COURSAT will provide you with modern courses tailored to your needs. Stay tuned for an exciting launch that will transform how you learn.
+                </p>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 5%; left: 6%; width: 40px; height: 40px; transform: rotate(-10deg); fill: rgba(255,255,255,0.25);" viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14l7-3 7 3V5a2 2 0 0 0-2-2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 40%; left: 18%; width: 30px; height: 30px; transform: rotate(15deg); fill: rgba(255,255,255,0.20);" viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14l7-3 7 3V5a2 2 0 0 0-2-2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 25%; left: 35%; width: 25px; height: 25px; transform: rotate(5deg); fill: rgba(255,255,255,0.18);" viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14l7-3 7 3V5a2 2 0 0 0-2-2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 75%; left: 5%; width: 35px; height: 35px; transform: rotate(-15deg); fill: rgba(255,255,255,0.22);" viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14l7-3 7 3V5a2 2 0 0 0-2-2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 65%; left: 30%; width: 30px; height: 30px; transform: rotate(10deg); fill: rgba(255,255,255,0.19);" viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14l7-3 7 3V5a2 2 0 0 0-2-2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 50%; left: 75%; width: 20px; height: 20px; transform: rotate(-20deg); fill: rgba(255,255,255,0.15);" viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14l7-3 7 3V5a2 2 0 0 0-2-2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 80%; left: 55%; width: 25px; height: 25px; transform: rotate(12deg); fill: rgba(255,255,255,0.17);" viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14l7-3 7 3V5a2 2 0 0 0-2-2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 10%; left: 80%; width: 28px; height: 28px; transform: rotate(8deg); fill: rgba(255,255,255,0.16);" viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14l7-3 7 3V5a2 2 0 0 0-2-2z"/></svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 30%; left: 85%; width: 45px; height: 45px; transform: rotate(-20deg); fill: rgba(255,255,255,0.22);" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 65%; left: 10%; width: 40px; height: 40px; transform: rotate(10deg); fill: rgba(255,255,255,0.18);" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 5%; left: 50%; width: 50px; height: 50px; transform: rotate(5deg); fill: rgba(255,255,255,0.20);" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 80%; left: 40%; width: 35px; height: 35px; transform: rotate(-10deg); fill: rgba(255,255,255,0.16);" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 45%; left: 35%; width: 30px; height: 30px; transform: rotate(12deg); fill: rgba(255,255,255,0.19);" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 60%; left: 60%; width: 28px; height: 28px; transform: rotate(-15deg); fill: rgba(255,255,255,0.15);" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9z"/></svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 75%; left: 40%; width: 35px; height: 35px; transform: rotate(15deg); fill: rgba(255,255,255,0.18);" viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1.003 1.003 0 0 0 0-1.41l-2.34-2.34a1.003 1.003 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 15%; left: 60%; width: 25px; height: 25px; transform: rotate(-15deg); fill: rgba(255,255,255,0.3);" viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1.003 1.003 0 0 0 0-1.41l-2.34-2.34a1.003 1.003 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 50%; left: 75%; width: 30px; height: 30px; transform: rotate(20deg); fill: rgba(255,255,255,0.25);" viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1.003 1.003 0 0 0 0-1.41l-2.34-2.34a1.003 1.003 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 20%; left: 80%; width: 20px; height: 20px; transform: rotate(-10deg); fill: rgba(255,255,255,0.20);" viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1.003 1.003 0 0 0 0-1.41l-2.34-2.34a1.003 1.003 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 85%; left: 15%; width: 28px; height: 28px; transform: rotate(15deg); fill: rgba(255,255,255,0.18);" viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1.003 1.003 0 0 0 0-1.41l-2.34-2.34a1.003 1.003 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 85%; left: 80%; width: 30px; height: 30px; transform: rotate(-10deg); fill: rgba(255,255,255,0.2);" viewBox="0 0 24 24"><path d="M21 7V5a2 2 0 0 0-2-2h-1.5a.5.5 0 0 0-.5.5V7H7V3H5v4H3v2h18z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 50%; left: 70%; width: 25px; height: 25px; transform: rotate(20deg); fill: rgba(255,255,255,0.25);" viewBox="0 0 24 24"><path d="M21 7V5a2 2 0 0 0-2-2h-1.5a.5.5 0 0 0-.5.5V7H7V3H5v4H3v2h18z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 15%; left: 75%; width: 20px; height: 20px; transform: rotate(-15deg); fill: rgba(255,255,255,0.18);" viewBox="0 0 24 24"><path d="M21 7V5a2 2 0 0 0-2-2h-1.5a.5.5 0 0 0-.5.5V7H7V3H5v4H3v2h18z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 55%; left: 85%; width: 22px; height: 22px; transform: rotate(10deg); fill: rgba(255,255,255,0.2);" viewBox="0 0 24 24"><path d="M21 7V5a2 2 0 0 0-2-2h-1.5a.5.5 0 0 0-.5.5V7H7V3H5v4H3v2h18z"/></svg>
+        </div>
+    </div>
+
+
+
+    <div class="section"><link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700;900&display=swap" rel="stylesheet">
+
+        <div class="container-fluid text-white py-5" style="background: linear-gradient(135deg, #414141ff, #8f8f8fff);height: 100vh;display: flex;align-items: center;padding-left: 5%;padding-right: 5%;position: relative;overflow: hidden;">
+
+            <div style="flex: 1; max-width: 40%; position: relative;">
+                <img src="img/planba2-logo.png" alt="Plan Ba2 Logo" style="width: auto; height: 20rem; object-fit: contain;">
+        
+                <h4 style="color: #d3dce6; font-weight: 500; margin-top: -10px; font-family: 'Inconsolata', monospace;color: white;">
+                    &nbsp;Dont call me lucky plan أ failed
+                </h4>
+                <p style="color: #f0f5fa; font-style: italic; margin-top: 15px; font-weight: 600;">
+                    &nbsp;&nbsp;Coming soon
+                </p>
+                <div class="mt-3" style="z-index:3;">
+                    <a href="https://github.com/rayanshwikie/Plan-Ba2-E-Commerce-Website-" class="btn btn-outline-light btn-skill" target="_blank" rel="noopener noreferrer" aria-label="Open Plan Ba2 repository on GitHub">
+                        <i class="bi bi-github me-2"></i> View repository
+                    </a>
+                </div>
+            </div>
+
+            <div style="flex: 1; max-width: 50%; color: white; text-align: justify; font-size: 1.2rem; line-height: 1.6; font-family: 'Inconsolata', monospace;">
+                <p>
+                    Plan Ba2 is more than just a clothing brand — it’s a lifestyle built around self-expression, confidence, and living with purpose. Every piece is designed to tell a story, to reflect the energy of those who wear it, and to inspire them to embrace their own path. Plan Ba2 isn’t about following trends — it’s about creating them, shaping a culture where style is personal, bold, and unapologetic.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <style>
+        .timeline { 
+            position: relative; padding: 2rem 0; 
+        }
+
+        .timeline::before { 
+            content: ""; position: absolute; left: 32px; top: 0; bottom: 0; width: 3px; background: rgba(255,255,255,0.06); 
+        }
+
+        .timeline-item { 
+            position: relative; margin: 1.6rem 0 2rem 0; display: flex; gap: 18px; align-items: center; 
+        }
+
+        .timeline-logo { 
+        position: relative; flex: 0 0 64px; width: 64px; height: 64px; border-radius: 8px; overflow: hidden; border: 2px solid rgba(255,255,255,0.06); background: #fff; display: flex; align-items: center; justify-content: center; 
+        }
+        .timeline-logo::after { 
+            content: ""; position: absolute; left: 100%; top: 50%; transform: translateY(-50%); width: 18px; height: 3px; background: linear-gradient(90deg,#3fc1ff,#8a7bff); border-radius:3px; box-shadow: 0 4px 10px rgba(56,98,148,0.18); 
+        }
+
+        .timeline-content { 
+            flex: 1; background: rgba(255,255,255,0.03); padding: 12px 16px; border-radius: 8px; box-shadow: 0 8px 30px rgba(0,0,0,0.45); 
+        }
+
+        .timeline .muted { 
+            color: rgba(255,255,255,0.7); 
+        }
+        @media (max-width: 767px) { .timeline { padding-left: 8px; } .timeline-item { display:block; padding-left: 0; } .timeline::before { left: 24px; } .timeline-logo{ margin-bottom:8px;} .timeline-logo::after{display:none;} }
+    </style>
+    
+
+    <div class="section" id="education" style="background: linear-gradient(180deg, #071427 0%, #0d1829 60%); position: relative; overflow: hidden;">
+        <style>
+        #education::before{ 
+            content: ""; position: absolute; inset: 0; background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.015) 0 2px, transparent 2px 60px); pointer-events: none; opacity: 0.9; z-index:1; 
+        }
+        </style>
+        <div class="container text-white py-5" style="position:relative; z-index:2;">
+
+            <h2 class="fw-bold mb-4 text-center" style="letter-spacing:0.6px;">Education & Certifications</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-logo">
+                        <img src="img/bir-hassan-logo.png" alt="Bir Hassan Logo" style="width:100%; height:100%; object-fit:contain;">
+                    </div>
+                    <div class="timeline-content">
+                        <h5 class="mb-1"><i class="bi bi-mortarboard-fill me-2"></i>Technical Baccalaureate in Software Development </h5>
+                        <p class="mb-1 muted">Bir Hassan Technical Institute</p>
+                        <small class="muted">Baccalaureate • <span>2022 — 2025</span></small>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-logo">
+                        <img src="img/aou-logo.png" alt="Arab Open University Logo" style="width:100%; height:100%; object-fit:contain;">
+                    </div>
+                    <div class="timeline-content">
+                        <h5 class="mb-1"><i class="bi bi-award-fill me-2"></i>Bachelor in Computer Science</h5>
+                        <p class="mb-1 muted">Arab Open University</p>
+                        <small class="muted">BSc • <span>2025 — Present</span></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section" id="resume" style="background: linear-gradient(180deg,#071427 0%, #0d1829 60%); position:relative; overflow:hidden;">
+        <style>
+            #resume::before{ 
+                content: ""; position: absolute; inset: 0; background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.015) 0 2px, transparent 2px 60px); pointer-events: none; opacity: 0.9; z-index:0; 
+            }
+
+            #resume::after{ 
+                content: ""; position: absolute; inset: 0; background: radial-gradient(800px 200px at 50% 10%, rgba(255,255,255,0.02), transparent 25%), radial-gradient(800px 400px at 50% 90%, rgba(0,0,0,0.25), transparent 40%); pointer-events: none; z-index:0; 
+            }
+
+            .resume-card{ 
+                position:relative; z-index:2; max-width:920px; margin:0 auto; background: rgba(255,255,255,0.03); border-radius:12px; padding:18px; box-shadow: 0 12px 40px rgba(0,0,0,0.45); 
+            }
+            .resume-preview{ 
+                width:110px; height:110px; display:flex; align-items:center; justify-content:center; background: linear-gradient(135deg,#3fc1ff,#8a7bff); color:#072033; font-size:2rem; border-radius:8px; 
+            }
+
+            .resume-desc { 
+                color: rgba(255,255,255,0.85);
+            }
+
+            @media (max-width:767px){ .resume-card{ padding:14px; } .resume-preview{ width:84px; height:84px; } .resume-card .d-flex{flex-direction:column; gap:.75rem;} }
+            .contact-card{ 
+                position:relative; z-index:2; max-width:920px; margin:0 auto; padding:32px; background: rgba(255,255,255,0.03); border-radius:12px; box-shadow: 0 12px 40px rgba(0,0,0,0.45); color: rgba(255,255,255,0.95); 
+            }
+
+            .contact-handles a { 
+                color: #ffffff; text-decoration: none; 
+            }
+            
+            @media (max-width:767px){ .contact-card{ padding:20px; } .contact-handles{flex-direction:column;} }
+        </style>
+
+        <div class="container text-white py-5" style="position:relative; z-index:2;">
+            <h2 class="fw-bold mb-4 text-center">Resume</h2>
+
+            <div class="resume-card d-flex align-items-center gap-4 p-1">
+                <div class="resume-preview">
+                    <i class="bi bi-file-earmark-person-fill"></i>
+                </div>
+                <div class="flex-fill">
+                    <h5 class="mb-1">Rayan Shwikie — Junior Software Developer</h5>
+                    <p class="mb-2 resume-desc small">Current CV with experience, education and notable projects. Download the PDF or view it in a new tab.</p>
+                    <div>
+                        <a href="RayanAlShwikie.pdf" class="btn btn-outline-light me-2" download><i class="bi bi-download me-1"></i>Download</a>
+                        <a href="RayanAlShwikie.pdf" class="btn btn-light" target="_blank" rel="noopener"><i class="bi bi-eye me-1"></i>View</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+            <div class="contact-card text-center">
+                <h2 class="fw-bold mb-3">Thanks for checking my portfolio</h2>
+                <p class="mb-3">I appreciate you taking the time — here’s a quick recap of my handles:</p>
+
+                <div class="contact-handles d-flex justify-content-center gap-3 mb-3">
+                    <a href="https://github.com/rayanshwikie" target="_blank" rel="noopener" class="btn btn-skill d-inline-flex align-items-center gap-2" aria-label="GitHub">
+                        <i class="bi bi-github"></i>
+                        <span class="d-none d-sm-inline">GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rayan-shwikie-b56278399/" target="_blank" rel="noopener" class="btn btn-skill d-inline-flex align-items-center gap-2" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                        <span class="d-none d-sm-inline">LinkedIn</span>
+                    </a>
+                    <a href="https://www.instagram.com/shwikie/" target="_blank" rel="noopener" class="btn btn-skill d-inline-flex align-items-center gap-2" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                        <span class="d-none d-sm-inline">Instagram</span>
+                    </a>
+                </div>
+
+                <p class="mb-3">Email: <a href="mailto:raynshwikie@gmail.com" class="text-white fw-bold">raynshwikie@gmail.com</a></p>
+
+                <div>
+                    <a href="mailto:raynshwikie@gmail.com" class="btn btn-light me-2" aria-label="Email Rayan"><i class="bi bi-envelope-fill me-1"></i>Email Me</a>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/fullpage.min.js"></script>
+<script>
+    new fullpage('#fullpage', {
+        autoScrolling:true,
+        dragAndMove:true,
+        navigation: true,
+        scrollingSpeed: 700,
+        anchors: ['hero', 'skills', 'project-coursat', 'project-planBa2', 'edu', 'resum', 'contact']
+    });
+</script>
+</body>
+</html>
+
