@@ -1,5 +1,5 @@
 # my personal portfolio currently in **development**.
-## **Veraion 1.0** :
+## **Version 1.0** :
 ### ◉ Website is published you can visit it at **rayanshikie.com**  
 ### ◉ Includes:  
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● **hero** section  
