@@ -1,6 +1,6 @@
 # my personal portfolio currently in **development**.
 ## **Veraion 1.0** :
-### -Website is published you can visit it at rayanshikie.com  
+### -Website is published you can visit it at **rayanshikie.com**  
 ### -Includes:  
   .**hero** section  
   .**skills** section  
