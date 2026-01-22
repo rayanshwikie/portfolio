@@ -31,6 +31,33 @@ body {
     position: relative;
     overflow: hidden;
 }
+
+/* Responsive fixes for COURSAT and Plan Ba2 logos */
+@media (max-width: 767px) {
+    .coursat-logo-title {
+        display: none !important;
+    }
+    .coursat-logo-title-mobile {
+        display: block !important;
+        font-size: 5.1rem !important;
+        max-width: 115vw;
+        letter-spacing: 0 !important;
+        word-break: keep-all;
+        white-space: nowrap !important;
+        margin-left: auto;
+        margin-right: auto;
+        overflow-wrap: break-word;
+        line-height: 2.01;
+    }
+    .coursat-desc-box p,
+    .planba2-desc-box p {
+        font-size: 1.05rem !important;
+    }
+    .planba2-logo-img {
+        max-width: 98vw !important;
+        height: 9.5rem !important;
+    }
+}
 .hero-center {
     display: flex;
     justify-content: center;   
