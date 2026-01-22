@@ -392,24 +392,29 @@
 
 
     <div class="section">
-        <div class="container-fluid text-white py-5 " style="background: linear-gradient(135deg, #6495ED, #1E3C72);height: 100vh;display: flex;align-items: center;padding-left: 5%;padding-right: 5%;position: relative;overflow: hidden;">
-            <div style="flex: 1; max-width: 40%; position: relative;">
-                <h1 style="color: white; font-weight: 900; font-size: 6rem; line-height: 1; font-family: 'Red Hat Display', serif;">COURSAT</h1>
-                <h4 style="color: #d3dce6; font-weight: 500; margin-top: -10px;"> &nbsp;Learn with no limits</h4>
-                <p style="color: #f0f5fa; font-style: italic; margin-top: 15px; font-weight: 600;"> &nbsp;&nbsp;Coming soon</p>
-                <div class="mt-3" style="z-index:3;">
-                    <a href="https://github.com/rayanshwikie/Coursat-C.M.S" class="btn btn-outline-light btn-skill" target="_blank" rel="noopener noreferrer" aria-label="Open COURSAT repository on GitHub">
-                        <i class="bi bi-github me-2"></i> View repository
-                    </a>
-                </div>
-            </div>
-            <div style="flex: 1; max-width: 50%; color: white; text-align: justify; font-size: 1.2rem; line-height: 1.6; font-family: 'Red Hat Display', serif;">
-                <p>
-                    COURSAT is your upcoming platform to unlock unlimited learning opportunities. Whether you want to master programming, design, or any other skill, COURSAT will provide you with modern courses tailored to your needs. Stay tuned for an exciting launch that will transform how you learn.
-                </p>
-            </div>
+                <div class="container-fluid text-white py-5 coursat-section" style="background: linear-gradient(135deg, #6495ED, #1E3C72); min-height: 100vh; position: relative; overflow: hidden;">
+                    <div class="row align-items-center justify-content-center flex-lg-row flex-column g-4 px-3 px-md-5" style="min-height: 80vh;">
+                        <!-- Logo/name first on all, description second on all, but stack on mobile -->
+                        <div class="col-lg-6 d-flex flex-column align-items-lg-start align-items-center text-lg-start text-center mb-4 mb-lg-0">
+                            <h1 class="fw-bold mb-2 coursat-logo-title d-none d-sm-block" style="font-size: 6.2rem; font-family: 'Red Hat Display', serif; word-break: break-word;">COURSAT</h1>
+                            <h1 class="fw-bold mb-2 coursat-logo-title-mobile d-block d-sm-none" style="font-size: 2.85rem; font-family: 'Red Hat Display', serif; word-break: break-word; letter-spacing: 0; margin: 0 auto;">COURSAT</h1> <!-- sizing for mobile COURSAT logo -->
+                            <h4 class="mb-1" style="color: #d3dce6; font-weight: 500; font-size: 2.3rem;">Learn with no limits</h4>
+                            <p class="fst-italic mb-3" style="color: #f0f5fa; font-weight: 600; font-size: 1.4rem;">Coming soon</p>
+                            <a href="https://github.com/rayanshwikie/Coursat-C.M.S" class="btn btn-outline-light btn-skill mt-2" style="font-size: 1.2rem; padding: 0.7rem 2.2rem;" target="_blank" rel="noopener noreferrer" aria-label="Open COURSAT repository on GitHub">
+                                <i class="bi bi-github me-2"></i> View repository
+                            </a>
+                        </div>
+                        <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                            <div class="coursat-desc-box p-4" style="background: rgba(255,255,255,0.10); border-radius: 1.5rem; width: 100%;">
+                                <p class="mb-0" style="font-size: 1.45rem; line-height: 1.7; font-family: 'Red Hat Display', serif; color: #fff;">
+                                    COURSAT is your upcoming platform to unlock unlimited learning opportunities. Whether you want to master programming, design, or any other skill, COURSAT will provide you with modern courses tailored to your needs. Stay tuned for an exciting launch that will transform how you learn.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
-            <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 5%; left: 6%; width: 40px; height: 40px; transform: rotate(-10deg); fill: rgba(255,255,255,0.25);" viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14l7-3 7 3V5a2 2 0 0 0-2-2z"/></svg>
+                </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 5%; left: 6%; width: 40px; height: 40px; transform: rotate(-10deg); fill: rgba(255,255,255,0.25);" viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14l7-3 7 3V5a2 2 0 0 0-2-2z"/></svg>
             <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 40%; left: 18%; width: 30px; height: 30px; transform: rotate(15deg); fill: rgba(255,255,255,0.20);" viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14l7-3 7 3V5a2 2 0 0 0-2-2z"/></svg>
             <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 25%; left: 35%; width: 25px; height: 25px; transform: rotate(5deg); fill: rgba(255,255,255,0.18);" viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14l7-3 7 3V5a2 2 0 0 0-2-2z"/></svg>
             <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 75%; left: 5%; width: 35px; height: 35px; transform: rotate(-15deg); fill: rgba(255,255,255,0.22);" viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14l7-3 7 3V5a2 2 0 0 0-2-2z"/></svg>
@@ -435,38 +440,32 @@
             <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 50%; left: 70%; width: 25px; height: 25px; transform: rotate(20deg); fill: rgba(255,255,255,0.25);" viewBox="0 0 24 24"><path d="M21 7V5a2 2 0 0 0-2-2h-1.5a.5.5 0 0 0-.5.5V7H7V3H5v4H3v2h18z"/></svg>
             <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 15%; left: 75%; width: 20px; height: 20px; transform: rotate(-15deg); fill: rgba(255,255,255,0.18);" viewBox="0 0 24 24"><path d="M21 7V5a2 2 0 0 0-2-2h-1.5a.5.5 0 0 0-.5.5V7H7V3H5v4H3v2h18z"/></svg>
             <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 55%; left: 85%; width: 22px; height: 22px; transform: rotate(10deg); fill: rgba(255,255,255,0.2);" viewBox="0 0 24 24"><path d="M21 7V5a2 2 0 0 0-2-2h-1.5a.5.5 0 0 0-.5.5V7H7V3H5v4H3v2h18z"/></svg>
-        </div>
     </div>
 
 
 
     <div class="section"><link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700;900&display=swap" rel="stylesheet">
 
-        <div class="container-fluid text-white py-5" style="background: linear-gradient(135deg, #414141ff, #8f8f8fff);height: 100vh;display: flex;align-items: center;padding-left: 5%;padding-right: 5%;position: relative;overflow: hidden;">
-
-            <div style="flex: 1; max-width: 40%; position: relative;">
-                <img src="img/planba2-logo.png" alt="Plan Ba2 Logo" style="width: auto; height: 20rem; object-fit: contain;">
-        
-                <h4 style="color: #d3dce6; font-weight: 500; margin-top: -10px; font-family: 'Inconsolata', monospace;color: white;">
-                    &nbsp;Dont call me lucky plan أ failed
-                </h4>
-                <p style="color: #f0f5fa; font-style: italic; margin-top: 15px; font-weight: 600;">
-                    &nbsp;&nbsp;Coming soon
-                </p>
-                <div class="mt-3" style="z-index:3;">
-                    <a href="https://github.com/rayanshwikie/Plan-Ba2-E-Commerce-Website-" class="btn btn-outline-light btn-skill" target="_blank" rel="noopener noreferrer" aria-label="Open Plan Ba2 repository on GitHub">
-                        <i class="bi bi-github me-2"></i> View repository
-                    </a>
+                <div class="container-fluid text-white py-5 planba2-section" style="background: linear-gradient(135deg, #414141ff, #8f8f8fff); min-height: 100vh; position: relative; overflow: hidden;">
+                    <div class="row align-items-center justify-content-center flex-lg-row flex-column g-4 px-3 px-md-5" style="min-height: 80vh;">
+                        <!-- Logo/name first on all, description second on all, but stack on mobile -->
+                        <div class="col-lg-6 d-flex flex-column align-items-lg-start align-items-center text-lg-start text-center mb-4 mb-lg-0">
+                            <img src="img/planba2-logo.png" alt="Plan Ba2 Logo" class="planba2-logo-img" style="width: auto; max-width: 440px; height: 19rem; object-fit: contain; margin-bottom: 1.2rem; max-width: 95vw;">
+                            <h4 class="mb-1" style="color: #d3dce6; font-weight: 500; font-size: 2.3rem; font-family: 'Inconsolata', monospace;">Dont call me lucky plan أ failed</h4>
+                            <p class="fst-italic mb-3" style="color: #f0f5fa; font-weight: 600; font-size: 1.4rem;">Coming soon</p>
+                            <a href="https://github.com/rayanshwikie/Plan-Ba2-E-Commerce-Website-" class="btn btn-outline-light btn-skill mt-2" style="font-size: 1.2rem; padding: 0.7rem 2.2rem;" target="_blank" rel="noopener noreferrer" aria-label="Open Plan Ba2 repository on GitHub">
+                                <i class="bi bi-github me-2"></i> View repository
+                            </a>
+                        </div>
+                        <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                            <div class="planba2-desc-box p-4" style="background: rgba(255,255,255,0.10); border-radius: 1.5rem; width: 100%;">
+                                <p class="mb-0" style="font-size: 1.45rem; line-height: 1.7; font-family: 'Inconsolata', monospace; color: #fff;">
+                                    Plan Ba2 is more than just a clothing brand — it’s a lifestyle built around self-expression, confidence, and living with purpose. Every piece is designed to tell a story, to reflect the energy of those who wear it, and to inspire them to embrace their own path. Plan Ba2 isn’t about following trends — it’s about creating them, shaping a culture where style is personal, bold, and unapologetic.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <div style="flex: 1; max-width: 50%; color: white; text-align: justify; font-size: 1.2rem; line-height: 1.6; font-family: 'Inconsolata', monospace;">
-                <p>
-                    Plan Ba2 is more than just a clothing brand — it’s a lifestyle built around self-expression, confidence, and living with purpose. Every piece is designed to tell a story, to reflect the energy of those who wear it, and to inspire them to embrace their own path. Plan Ba2 isn’t about following trends — it’s about creating them, shaping a culture where style is personal, bold, and unapologetic.
-                </p>
-            </div>
-
-        </div>
     </div>
 
 
